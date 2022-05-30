@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Box, FlexBox, ImageBox, TextBox } from "../components/styled-components";
-import { Hero } from "../components";
+import { Hero, Activities } from "../components";
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <Activities />
     </Box>
   );
 }
