@@ -2,7 +2,7 @@ import { Box, FlexBox, ImageBox, TextBox } from "./styled-components";
 
 export function Activities() {
   return (
-    <Box maxWidth={1200} mx="auto" px={10}>
+    <Box maxWidth={1200} mx="auto" px={10} mb={50}>
       <TextBox as="h3" mt={50} mb={30} fontSize={32} textAlign="center">
         Faaliyet Alanlarımız
       </TextBox>

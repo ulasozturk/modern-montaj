@@ -3,7 +3,7 @@ import { Gallery } from "./gallery";
 
 export function ShortGallery() {
   return (
-    <Box maxWidth={1200} mx="auto" p={10}>
+    <Box maxWidth={1200} mx="auto" p={10} bg="#f2f2f2">
       <TextBox as="h2" mt={50} mb={30} fontSize={32} textAlign="center">
         Fotoğraflar
       </TextBox>
@@ -11,6 +11,9 @@ export function ShortGallery() {
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias sit suscipit mollitia, vero,
         tempore vel debitis nisi animi quas adipisci cum neque omnis reprehenderit aspernatur
         doloremque.
+      </TextBox>
+      <TextBox textAlign="center" fontSize={18} fontWeight={500}>
+        Devamını gör
       </TextBox>
       <Gallery data={data} mt={20} />
     </Box>
