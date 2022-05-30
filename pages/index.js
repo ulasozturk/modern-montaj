@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Box, FlexBox, ImageBox, TextBox } from "../components/styled-components";
-import { Hero, Activities, ShortGallery } from "../components";
+import { Hero, Activities, ShortGallery, Projects } from "../components";
 
 export default function Home() {
   return (
@@ -13,6 +13,7 @@ export default function Home() {
       <Hero />
       <Activities />
       <ShortGallery />
+      <Projects />
     </Box>
   );
 }
