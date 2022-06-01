@@ -1,6 +1,6 @@
 import Head from "next/head";
-import { Box, FlexBox, ImageBox, TextBox } from "../components/styled-components";
-import { Hero, Activities, ShortGallery, Projects } from "../components";
+import { Box, ImageBox } from "../components/styled-components";
+import { Hero, Activities, ShortGallery, Projects, References } from "../components";
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
       <Activities />
       <ShortGallery />
       <Projects />
+      <References />
     </Box>
   );
 }
