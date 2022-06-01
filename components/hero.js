@@ -18,7 +18,7 @@ export function Hero() {
         bg="#0004"
         alignItems="center"
       >
-        <FlexBox ml="10%" p={20} column>
+        <FlexBox ml="10%" p={20} column alignItems="flex-start">
           <TextBox fontSize={32} color="white">
             Lorem ipsum dolor sit amet
           </TextBox>

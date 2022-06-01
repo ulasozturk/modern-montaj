@@ -21,7 +21,6 @@ export const Box = styled("div")(
 export const FlexBox = styled("div")(
   {
     display: "flex",
-    alignItems: "flex-start",
     cursor: ({ pointer }) => (pointer ? "pointer" : null),
     flexDirection: ({ column }) => (column ? "column" : "row"),
   },
