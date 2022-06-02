@@ -2,7 +2,7 @@ import { FlexBox, ImageBox, TextBox } from "./styled-components";
 
 export function Footer() {
   return (
-    <FlexBox width="100%" bg="#dedede" column>
+    <FlexBox as="footer" width="100%" bg="#dedede" column>
       <FlexBox maxWidth={1200} flex={1} mx="auto" flexWrap="wrap" px={20} py={100}>
         <FlexBox flexBasis={["100%", "50%", "33.33%"]} column p={20}>
           <ImageBox src="/logo.png" width="100%" style={{ backgroundColor: "#e6e6e6" }} />
@@ -29,12 +29,12 @@ export function Footer() {
           <TextBox mb={20} fontSize={24} fontWeight={500}>
             İletişim
           </TextBox>
-          <TextBox>
+          <TextBox my={10}>
             Abdurrahmangazi Mah Ebubekir Cad Betul Sok No:2 Tuna Is Merkezi D: 6 Sancaktepe -
             Istanbul
           </TextBox>
-          <TextBox>0 507 488 41 82 | 0 534 893 70 02</TextBox>
-          <TextBox>info@tanselenerji.com.tr</TextBox>
+          <TextBox my={10}>0 507 488 41 82 | 0 534 893 70 02</TextBox>
+          <TextBox my={10}>info@tanselenerji.com.tr</TextBox>
         </FlexBox>
       </FlexBox>
       <FlexBox width="100%" bg="#333">
