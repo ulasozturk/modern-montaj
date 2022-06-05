@@ -67,11 +67,36 @@ export function Navbar() {
       </FlexBox>
       <FlexBox display={isMenuOpen ? ["flex", "flex", "none"] : "none"} column alignItems="stretch">
         <ColumnItem text="Anasayfa" />
-        <ColumnItem text="Kurumsal" />
-        <ColumnItem text="Faaliyet Alanlarımız" />
-        <ColumnItem text="Hizmetlerimiz" />
-        <ColumnItem text="Projelerimiz" />
-        <ColumnItem text="İletişim" />
+        <ColumnItem
+          text="Kurumsal"
+          dropdown={[{ text: "Hakkımızda" }, { text: "Misyon ve Vizyon" }, { text: "Kariyer" }]}
+        />
+        <ColumnItem
+          text="Faaliyet Alanlarımız"
+          dropdown={[
+            { text: "Enerji Üretimi" },
+            { text: "Endüstriyel Tesisler" },
+            { text: "Enerji Dağıtımı" },
+            { text: "Enerji İletimi" },
+          ]}
+        />
+        <ColumnItem
+          text="Hizmetlerimiz"
+          dropdown={[
+            { text: "Mühendislik" },
+            { text: "Montaj" },
+            { text: "Eğitim" },
+            { text: "Bakım ve Servis" },
+          ]}
+        />
+        <ColumnItem
+          text="Projelerimiz"
+          dropdown={[{ text: "Referanslarımız" }, { text: "Projelerimiz" }, { text: "Galeri" }]}
+        />
+        <ColumnItem
+          text="İletişim"
+          dropdown={[{ text: "Konum" }, { text: "Telefon" }, { text: "E-posta" }]}
+        />
       </FlexBox>
     </Box>
   );
@@ -88,10 +113,15 @@ const RowItemContainer = styled(FlexBox)({
 function RowItem({ text, dropdown }) {
   return (
     <RowItemContainer>
-      <FlexBox className="link" p={10}>
+      <FlexBox className="link" p={10} alignItems="center">
         <TextBox fontSize={16} fontWeight={500}>
           {text}
         </TextBox>
+        {!!dropdown && (
+          <FlexBox>
+            <span class="material-icons">expand_more</span>
+          </FlexBox>
+        )}
       </FlexBox>
       {!!dropdown && (
         <FlexBox
@@ -116,10 +146,35 @@ function RowItem({ text, dropdown }) {
   );
 }
 
-function ColumnItem({ text }) {
+function ColumnItem({ text, dropdown }) {
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
   return (
-    <FlexBox justifyContent="center" p={20}>
-      <TextBox>{text}</TextBox>
+    <FlexBox
+      flexDirection="column"
+      alignItems="center"
+      p={20}
+      onClick={() => setDropdownVisible((s) => !s)}
+    >
+      <FlexBox alignItems="center">
+        <TextBox fontSize={16} fontWeight={500}>
+          {text}
+        </TextBox>
+        {!!dropdown && (
+          <FlexBox>
+            <span className="material-icons">expand_more</span>
+          </FlexBox>
+        )}
+      </FlexBox>
+      {!!dropdown && !!dropdownVisible && (
+        <FlexBox flexDirection="column" alignItems="center" p={10}>
+          {dropdown.map((item) => (
+            <TextBox p={10} columndropdownitem>
+              {item.text}
+            </TextBox>
+          ))}
+        </FlexBox>
+      )}
     </FlexBox>
   );
 }

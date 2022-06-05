@@ -43,6 +43,7 @@ export function Footer() {
           height={60}
           maxWidth={1200}
           mx="auto"
+          px={20}
           alignItems="center"
           justifyContent="space-between"
         >
