@@ -202,7 +202,7 @@ function ColumnItem({ text, dropdown }) {
       {!!dropdown && !!dropdownVisible && (
         <FlexBox flexDirection="column" alignItems="center" p={10}>
           {dropdown.map((item) => (
-            <TextBox p={10} columndropdownitem>
+            <TextBox p={10} key={item.text} columndropdownitem>
               {item.text}
             </TextBox>
           ))}
