@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FlexBox, ImageBox, TextBox } from "./styled-components";
 
 export function References() {
@@ -13,7 +14,9 @@ export function References() {
           aspernatur doloremque.
         </TextBox>
         <TextBox textAlign="center" fontSize={18} fontWeight={500}>
-          Devamını gör
+          <Link href="/references">
+            <a>Devamını gör</a>
+          </Link>
         </TextBox>
         <FlexBox flexWrap="wrap">
           <Item url="https://www.freepnglogos.com/uploads/audi-logo-0.gif" />

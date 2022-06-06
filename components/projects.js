@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FlexBox, ImageBox, TextBox } from "./styled-components";
 
 export function Projects() {
@@ -11,7 +12,9 @@ export function Projects() {
         facere nobis numquam necessitatibus.
       </TextBox>
       <TextBox textAlign="center" fontSize={18} fontWeight={500}>
-        Devamını gör
+        <Link href="/projects">
+          <a>Devamını gör</a>
+        </Link>
       </TextBox>
       <FlexBox mt={20} flexWrap="wrap">
         {[1, 2, 3, 4, 5].map((i, index) => (

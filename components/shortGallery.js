@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FlexBox, TextBox } from "./styled-components";
 import { Gallery } from "./gallery";
 
@@ -14,7 +15,9 @@ export function ShortGallery() {
           aspernatur doloremque.
         </TextBox>
         <TextBox textAlign="center" fontSize={18} fontWeight={500}>
-          Devamını gör
+          <Link href="/gallery">
+            <a>Devamını gör</a>
+          </Link>
         </TextBox>
         <Gallery data={data} mt={20} />
       </FlexBox>

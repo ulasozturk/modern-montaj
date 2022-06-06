@@ -19,40 +19,48 @@ export function Navbar() {
           alignItems="stretch"
           height="100%"
         >
-          <RowItem text="Anasayfa" />
+          <RowItem text="Anasayfa" to="/" />
           <RowItem
             text="Kurumsal"
             dropdown={[
               { text: "Hakkımızda", to: "/about" },
-              { text: "Misyon ve Vizyon" },
-              { text: "Kariyer" },
+              { text: "Misyon ve Vizyon", to: "/mission-vision" },
+              { text: "Kariyer", to: "/career" },
             ]}
           />
           <RowItem
             text="Faaliyet Alanlarımız"
             dropdown={[
-              { text: "Enerji Üretimi" },
-              { text: "Endüstriyel Tesisler" },
-              { text: "Enerji Dağıtımı" },
-              { text: "Enerji İletimi" },
+              { text: "Enerji Üretimi", to: "energy-production" },
+              { text: "Endüstriyel Tesisler", to: "industrial-facilities" },
+              { text: "Enerji Dağıtımı", to: "energy-distribution" },
+              { text: "Enerji İletimi", to: "enery-transmission" },
             ]}
           />
           <RowItem
             text="Hizmetlerimiz"
             dropdown={[
-              { text: "Mühendislik" },
-              { text: "Montaj" },
-              { text: "Eğitim" },
-              { text: "Bakım ve Servis" },
+              { text: "Mühendislik", to: "engineering" },
+              { text: "Montaj", to: "installation" },
+              { text: "Eğitim", to: "training" },
+              { text: "Bakım ve Servis", to: "maintenance-service" },
             ]}
           />
           <RowItem
             text="Projelerimiz"
-            dropdown={[{ text: "Referanslarımız" }, { text: "Projelerimiz" }, { text: "Galeri" }]}
+            dropdown={[
+              { text: "Referanslarımız", to: "references" },
+              { text: "Projelerimiz", to: "projects" },
+              { text: "Galeri", to: "gallery" },
+            ]}
           />
           <RowItem
             text="İletişim"
-            dropdown={[{ text: "Konum" }, { text: "Telefon" }, { text: "E-posta" }]}
+            dropdown={[
+              { text: "Konum", to: "location" },
+              { text: "Telefon", to: "phone" },
+              { text: "E-posta", to: "email" },
+            ]}
           />
         </FlexBox>
         <FlexBox
@@ -74,33 +82,45 @@ export function Navbar() {
         <ColumnItem text="Anasayfa" />
         <ColumnItem
           text="Kurumsal"
-          dropdown={[{ text: "Hakkımızda" }, { text: "Misyon ve Vizyon" }, { text: "Kariyer" }]}
+          dropdown={[
+            { text: "Hakkımızda", to: "/about" },
+            { text: "Misyon ve Vizyon", to: "/mission-vision" },
+            { text: "Kariyer", to: "/career" },
+          ]}
         />
         <ColumnItem
           text="Faaliyet Alanlarımız"
           dropdown={[
-            { text: "Enerji Üretimi" },
-            { text: "Endüstriyel Tesisler" },
-            { text: "Enerji Dağıtımı" },
-            { text: "Enerji İletimi" },
+            { text: "Enerji Üretimi", to: "energy-production" },
+            { text: "Endüstriyel Tesisler", to: "industrial-facilities" },
+            { text: "Enerji Dağıtımı", to: "energy-distribution" },
+            { text: "Enerji İletimi", to: "enery-transmission" },
           ]}
         />
         <ColumnItem
           text="Hizmetlerimiz"
           dropdown={[
-            { text: "Mühendislik" },
-            { text: "Montaj" },
-            { text: "Eğitim" },
-            { text: "Bakım ve Servis" },
+            { text: "Mühendislik", to: "engineering" },
+            { text: "Montaj", to: "installation" },
+            { text: "Eğitim", to: "training" },
+            { text: "Bakım ve Servis", to: "maintenance-service" },
           ]}
         />
         <ColumnItem
           text="Projelerimiz"
-          dropdown={[{ text: "Referanslarımız" }, { text: "Projelerimiz" }, { text: "Galeri" }]}
+          dropdown={[
+            { text: "Referanslarımız", to: "references" },
+            { text: "Projelerimiz", to: "projects" },
+            { text: "Galeri", to: "gallery" },
+          ]}
         />
         <ColumnItem
           text="İletişim"
-          dropdown={[{ text: "Konum" }, { text: "Telefon" }, { text: "E-posta" }]}
+          dropdown={[
+            { text: "Konum", to: "location" },
+            { text: "Telefon", to: "phone" },
+            { text: "E-posta", to: "email" },
+          ]}
         />
       </FlexBox>
     </Box>
@@ -115,12 +135,18 @@ const RowItemContainer = styled(FlexBox)({
   alignItems: "center",
 });
 
-function RowItem({ text, dropdown }) {
+function RowItem({ text, dropdown, to }) {
   return (
     <RowItemContainer>
       <FlexBox className="link" p={10} alignItems="center">
         <TextBox fontSize={16} fontWeight={500}>
-          {text}
+          {to ? (
+            <Link href={to}>
+              <a>{text}</a>
+            </Link>
+          ) : (
+            text
+          )}
         </TextBox>
         {!!dropdown && (
           <FlexBox>
