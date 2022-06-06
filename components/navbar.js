@@ -150,7 +150,7 @@ function RowItem({ text, dropdown, to }) {
         </TextBox>
         {!!dropdown && (
           <FlexBox>
-            <span class="material-icons">expand_more</span>
+            <span className="material-icons">expand_more</span>
           </FlexBox>
         )}
       </FlexBox>
