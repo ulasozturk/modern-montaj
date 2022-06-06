@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Box, ImageBox } from "../components/styled-components";
+import { Box } from "../components/styled-components";
 import { Hero, Activities, ShortGallery, Projects, References } from "../components";
 
 export default function Home() {

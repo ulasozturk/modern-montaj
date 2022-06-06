@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Box, FlexBox, ImageBox, TextBox } from "./styled-components";
+import Link from "next/link";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +22,11 @@ export function Navbar() {
           <RowItem text="Anasayfa" />
           <RowItem
             text="Kurumsal"
-            dropdown={[{ text: "Hakkımızda" }, { text: "Misyon ve Vizyon" }, { text: "Kariyer" }]}
+            dropdown={[
+              { text: "Hakkımızda", to: "/about" },
+              { text: "Misyon ve Vizyon" },
+              { text: "Kariyer" },
+            ]}
           />
           <RowItem
             text="Faaliyet Alanlarımız"
@@ -137,7 +142,9 @@ function RowItem({ text, dropdown }) {
         >
           {dropdown.map((item) => (
             <TextBox className="dropText" key={item.text} p={10}>
-              {item.text}
+              <Link href={item.to ? item.to : "/"}>
+                <a>{item.text}</a>
+              </Link>
             </TextBox>
           ))}
         </FlexBox>
