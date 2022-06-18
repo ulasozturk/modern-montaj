@@ -3,12 +3,7 @@ import { Box, FlexBox, ImageBox, TextBox } from "./styled-components";
 export function Hero() {
   return (
     <Box position="relative" height="90vh">
-      <ImageBox
-        width="100%"
-        height="100%"
-        style={{ objectFit: "cover" }}
-        src="https://www.kontrolmatik.com/Content/images/slider.jpg"
-      />
+      <ImageBox width="100%" height="100%" style={{ objectFit: "cover" }} src="/hero-image.jpeg" />
       <FlexBox
         position="absolute"
         left={0}
@@ -19,8 +14,8 @@ export function Hero() {
         alignItems="center"
       >
         <FlexBox ml="10%" p={20} column alignItems="flex-start">
-          <TextBox fontSize={32} color="white">
-            Lorem ipsum dolor sit amet
+          <TextBox width={["100%", "50%", "50%"]} fontSize={32} color="white">
+            Enerji sektöründe ulusal ve uluslarası çözüm ortağınız
           </TextBox>
           <TextBox bg="white" mt={10} px={20} py={10}>
             Daha fazla
