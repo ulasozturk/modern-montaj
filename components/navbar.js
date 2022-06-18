@@ -8,9 +8,9 @@ export function Navbar() {
   const toggleMenu = () => setIsMenuOpen((s) => !s);
 
   return (
-    <Box width="100%" boxShadow="0 2px 4px 0 rgba(0,0,0,0.2)">
-      <FlexBox height="10vh" maxWidth={1200} mx="auto" px={20} overflow="hidden">
-        <ImageBox src="/logo.png" height="10vh" mr={50} />
+    <Box width="100%" boxShadow="0 8px 4px 4px #ccc">
+      <FlexBox maxWidth={1200} mx="auto" px={20} overflow="hidden" alignItems="center">
+        <ImageBox src="/mme-logo-long.png" height={70} mr={50} my={10} />
         <Box flex={1} />
         <FlexBox
           as="nav"

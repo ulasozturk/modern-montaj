@@ -2,10 +2,10 @@ import { FlexBox, ImageBox, TextBox } from "./styled-components";
 
 export function Footer() {
   return (
-    <FlexBox as="footer" width="100%" bg="#dedede" column>
+    <FlexBox as="footer" width="100%" column>
       <FlexBox maxWidth={1200} flex={1} mx="auto" flexWrap="wrap" px={20} py={100}>
         <FlexBox flexBasis={["100%", "50%", "33.33%"]} column p={20}>
-          <ImageBox src="/logo.png" width="100%" style={{ backgroundColor: "#e6e6e6" }} />
+          <ImageBox src="/mme-logo.png" width="50%" style={{ backgroundColor: "#e6e6e6" }} />
           <TextBox mt={20} textAlign="center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique itaque qui
             consectetur temporibus quae fuga, omnis dicta enim accusamus amet nesciunt ratione
@@ -30,11 +30,10 @@ export function Footer() {
             İletişim
           </TextBox>
           <TextBox my={10}>
-            Abdurrahmangazi Mah Ebubekir Cad Betul Sok No:2 Tuna Is Merkezi D: 6 Sancaktepe -
-            Istanbul
+            Adres: Küçükbakkalköy Mah. Sıraevler Sk. No:14 34750 Ataşehir-İstanbul
           </TextBox>
-          <TextBox my={10}>0 507 488 41 82 | 0 534 893 70 02</TextBox>
-          <TextBox my={10}>info@tanselenerji.com.tr</TextBox>
+          <TextBox my={10}>Tel: +90 (216) 511 59 58</TextBox>
+          <TextBox my={10}>E-posta: info@modernmontaj.com</TextBox>
         </FlexBox>
       </FlexBox>
       <FlexBox width="100%" bg="#333">
