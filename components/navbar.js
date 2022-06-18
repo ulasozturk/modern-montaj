@@ -34,7 +34,7 @@ export function Navbar() {
               { text: "Enerji Üretimi", to: "energy-production" },
               { text: "Endüstriyel Tesisler", to: "industrial-facilities" },
               { text: "Enerji Dağıtımı", to: "energy-distribution" },
-              { text: "Enerji İletimi", to: "enery-transmission" },
+              { text: "Enerji İletimi", to: "energy-transmission" },
             ]}
           />
           <RowItem
